@@ -1,0 +1,2 @@
+# NorwegianLoanCalculator
+Norwegian loan calculator
