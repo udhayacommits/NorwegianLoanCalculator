@@ -26,8 +26,23 @@ def months_until_paid_out(credit_sum, monthly_payment, initial_payment, monthly_
 
 
 if __name__ == "__main__":
-    credit_sum = 3000000
-    monthly_payment = 12500
+    while True:
+        credit_sum = input("Enter the credit sum value:")
+        try:
+            credit_sum = float(credit_sum)
+        except ValueError:
+            print("This is not a valid number. Please try again!")
+        else:
+            break
+    
+    while True:
+        monthly_payment = input("Enter the monthly payment amount:")
+        try:
+            monthly_payment = float(monthly_payment)
+        except ValueError:
+            print("This is not a valid number. Please try again!")
+        else:
+            break
 
     print("DNB: ")
     months_until_paid_out(credit_sum, monthly_payment, DNB_INITIAL_PAYMENT, DNB_MONTHLY_PERCENTAGE, DNB_FEE)
